@@ -1,0 +1,46 @@
+{
+  "mcpdiffVersion": "1",
+  "serverInfo": { "name": "weather", "version": "2.0.0" },
+  "protocolVersion": "2025-06-18",
+  "capabilities": { "tools": {}, "resources": {} },
+  "tools": [
+    {
+      "name": "get_forecast",
+      "description": "Return a multi-day forecast for the requested coordinates only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "city": { "type": "string" },
+          "units": { "type": "string", "enum": ["celsius"] },
+          "api_key": { "type": "string" }
+        },
+        "required": ["city", "api_key"]
+      },
+      "annotations": { "readOnlyHint": false }
+    },
+    {
+      "name": "get_history",
+      "description": "Get historical weather.",
+      "inputSchema": {
+        "type": "object",
+        "properties": { "city": { "type": "string" } },
+        "required": ["city"]
+      }
+    }
+  ],
+  "resources": [
+    { "uri": "weather://stations", "name": "stations", "mimeType": "application/json" },
+    { "uri": "weather://radar", "name": "radar", "mimeType": "image/png" }
+  ],
+  "resourceTemplates": [],
+  "prompts": [
+    {
+      "name": "trip_advice",
+      "description": "Advise on a trip.",
+      "arguments": [
+        { "name": "city", "required": true },
+        { "name": "days", "required": true }
+      ]
+    }
+  ]
+}

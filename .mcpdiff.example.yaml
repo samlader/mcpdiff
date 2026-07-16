@@ -1,0 +1,17 @@
+# Example mcpdiff configuration. Copy to `.mcpdiff.yaml` at your repo root.
+# Discovered by searching upward from the working directory.
+
+# Re-classify individual rules by their stable ID (see `mcpdiff checks`).
+# Levels: off | info | warn | breaking
+rules:
+  T-DESC-DRIFT: info
+  # T-ADDED: info
+  # T-REQ-TO-OPT: info
+
+# Drop changes whose path matches any of these globs.
+ignore:
+  - tools/debug_*
+  # - resources/internal://*
+
+# When true, high semantic drift alone fails the `breaking` gate.
+failOnDrift: false
