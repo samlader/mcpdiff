@@ -1,0 +1,40 @@
+{
+  "mcpdiffVersion": "1",
+  "serverInfo": { "name": "weather", "version": "1.0.0" },
+  "protocolVersion": "2025-06-18",
+  "capabilities": { "tools": {}, "resources": {} },
+  "tools": [
+    {
+      "name": "get_forecast",
+      "description": "Get the weather forecast for a city.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "city": { "type": "string" },
+          "units": { "type": "string", "enum": ["celsius", "fahrenheit"] }
+        },
+        "required": ["city"]
+      },
+      "annotations": { "readOnlyHint": true }
+    },
+    {
+      "name": "list_alerts",
+      "description": "List active weather alerts.",
+      "inputSchema": {
+        "type": "object",
+        "properties": { "region": { "type": "string" } }
+      }
+    }
+  ],
+  "resources": [
+    { "uri": "weather://stations", "name": "stations", "mimeType": "application/json" }
+  ],
+  "resourceTemplates": [],
+  "prompts": [
+    {
+      "name": "trip_advice",
+      "description": "Advise on a trip.",
+      "arguments": [{ "name": "city", "required": true }]
+    }
+  ]
+}

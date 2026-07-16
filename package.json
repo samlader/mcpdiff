@@ -1,0 +1,71 @@
+{
+  "name": "mcpdiff",
+  "version": "0.1.0",
+  "description": "Diff two MCP servers and detect breaking changes. The oasdiff of the Model Context Protocol.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "diff",
+    "breaking-changes",
+    "changelog",
+    "api-governance",
+    "cli"
+  ],
+  "homepage": "https://github.com/samlader/mcpdiff#readme",
+  "bugs": {
+    "url": "https://github.com/samlader/mcpdiff/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samlader/mcpdiff.git"
+  },
+  "license": "MIT",
+  "author": "Sam Lader",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "mcpdiff": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/cli.ts",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "commander": "^13.1.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0",
+    "vitest": "^4.1.10"
+  }
+}
