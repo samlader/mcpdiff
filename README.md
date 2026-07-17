@@ -38,13 +38,13 @@ cd mcpdiff && npm install && npm run build
 
 The top-level subcommands. `<base>` and `<revision>` are each a [source](#inputs).
 
-- `capture`: introspect a live server into a canonical [snapshot](#the-snapshot) you can commit and diff later
-- `diff`: full diff of the server's surface, including documentation-only edits (output: text, json, markdown, or github)
-- `summary`: high-level count of changes between two servers
-- `breaking`: only the changes that break existing MCP clients; exits non-zero when any are found
-- `changelog`: changes that can affect MCP clients, breaking or not, in human-readable form
-- `validate`: check that a server or snapshot is reachable and well-formed
-- `checks`: list the rules mcpdiff uses to classify changes ([customize them](#configuration))
+- `capture` introspect a live server into a canonical [snapshot](#the-snapshot) you can commit and diff later
+- `diff` full diff of the server's surface, including documentation-only edits (output text, json, markdown, or github)
+- `summary` high-level count of changes between two servers
+- `breaking` only the changes that break existing MCP clients; exits non-zero when any are found
+- `changelog` changes that can affect MCP clients, breaking or not, in human-readable form
+- `validate` check that a server or snapshot is reachable and well-formed
+- `checks` list the rules mcpdiff uses to classify changes ([customize them](#configuration))
 
 ### Inputs
 
