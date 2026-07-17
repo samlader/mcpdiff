@@ -6,7 +6,7 @@
 
 Command-line tool to compare and detect breaking changes in [MCP](https://modelcontextprotocol.io) servers.
 
-Detects both **hard contract breaks** (a removed tool, a new required argument, a narrowed enum) and **semantic drift** (a reworded description that changes how the model calls a tool, with no schema change at all).
+Detects both **hard contract breaks** (e.g. removed tools, a new required argument, a narrowed enum) and **semantic drift** (e.g. a reworded description that changes how the model calls a tool, with no schema change at all).
 
 Run it locally, in CI to gate pull requests on breaking changes, or embed the library in your own tooling.
 
