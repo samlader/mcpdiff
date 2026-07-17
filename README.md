@@ -41,7 +41,7 @@ cd mcpdiff && npm install && npm run build
 
 The top-level subcommands. `<base>` and `<revision>` are each a [source](#inputs).
 
-- `capture` introspect a live server into a canonical [snapshot](#the-snapshot) you can commit and diff later
+- `capture` introspect a live server into a canonical snapshot you can commit and diff later
 - `diff` full diff of the server's surface, including documentation-only edits (output text, json, markdown, or github)
 - `summary` high-level count of changes between two servers
 - `breaking` only the changes that break existing MCP clients; exits non-zero when any are found
@@ -78,9 +78,9 @@ Every finding carries a stable rule ID (`T-REQ-ADD`, `T-ENUM-REMOVE`, `P-ARG-REQ
 
 ### How to run
 
-- [Continuous integration](#ci): gate pull requests on breaking changes
-- [Configuration file](#configuration): `.mcpdiff.yaml` for per-rule overrides and ignore globs
-- [Use as a library](#library): everything the CLI does is exported from the npm package
+- [Continuous integration](#ci) gate pull requests on breaking changes
+- [Configuration file](#configuration) `.mcpdiff.yaml` for per-rule overrides and ignore globs
+- [Use as a library](#library) everything the CLI does is exported from the npm package
 
 ## CI
 
