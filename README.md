@@ -10,6 +10,10 @@ Detects both **hard contract breaks** (a removed tool, a new required argument, 
 
 Run it locally, in CI to gate pull requests on breaking changes, or embed the library in your own tooling.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/samlader/mcpdiff/main/docs/demo.png" alt="mcpdiff breaking output showing five breaking changes and one semantic-drift warning between two versions of an MCP server" width="900">
+</p>
+
 ## Installation
 
 ### Install with npm
