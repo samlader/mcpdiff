@@ -1,7 +1,6 @@
 # mcpdiff
 
 [![CI](https://github.com/samlader/mcpdiff/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/samlader/mcpdiff/actions)
-[![codecov](https://codecov.io/gh/samlader/mcpdiff/branch/main/graph/badge.svg)](https://codecov.io/gh/samlader/mcpdiff)
 [![npm](https://img.shields.io/npm/v/mcpdiff.svg)](https://www.npmjs.com/package/mcpdiff)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
@@ -67,9 +66,9 @@ Where a server's surface comes from. Every command accepts these forms for both 
 Shape the report for humans or automation. `diff` and `breaking` accept `--format`:
 
 - `text` (default): colorized terminal report
-- `json`: machine-readable, one object per change with `severity`, `ruleId`, and `path`
-- `markdown`: a table for pull-request comments
-- `github`: GitHub Actions `::error` / `::warning` annotations for inline PR feedback
+- `json` machine-readable, one object per change with `severity`, `ruleId`, and `path`
+- `markdown` a table for pull-request comments
+- `github` GitHub Actions `::error` / `::warning` annotations for inline PR feedback
 
 Every finding carries a stable rule ID (`T-REQ-ADD`, `T-ENUM-REMOVE`, `P-ARG-REQ-ADD`, …) so you can suppress or re-classify individual rules.
 
